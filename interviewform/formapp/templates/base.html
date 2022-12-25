@@ -1,0 +1,31 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link rel="stylesheet"<div class="container">
+    <title>Interview Form</title>
+  </head>
+  <body>
+    <form action="{% url 'index' %}" method='post'>
+        {% csrf_token %}
+      
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+        <label for="country">Type</label>
+        <select id="country" name="country">
+          <option value="australia">IT</option>
+          <option value="usa">B2B</option>
+        </select>
+        <input type="submit" value="Submit">
+    
+      </form>
+
+  </body>
+</html>
